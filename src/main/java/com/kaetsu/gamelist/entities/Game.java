@@ -47,18 +47,6 @@ public class Game {
         this.score = score;
     }
 
-    public Game(Game source) {
-        this.id = source.id;
-        this.title = source.title;
-        this.year = source.year;
-        this.genre = source.genre;
-        this.platforms = source.platforms;
-        this.imgURL = source.imgURL;
-        this.shortDescription = source.shortDescription;
-        this.longDescription = source.longDescription;
-        this.score = source.score;
-    }
-
     public Long getId() {
         return id;
     }
