@@ -22,34 +22,31 @@ public class Game {
     @Column(name = "game_year")
     private Integer year;
     private String genre;
-    private String platform;
+    private String platforms;
+    private Double score;
+
+    @Column(name = "img_url")
     private String imgURL;
+    
+    // Annotate the descriptions fields for explicit TEXT type in DB, default is VARCHAR with only 255 chars limit
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game() {
     }
 
-    public Game(String longDescription, String shortDescription, Long id, String title, Integer year, String genre, String platform, String imgURL) {
+    public Game(String longDescription, String shortDescription, Long id, String title, Integer year, String genre, String platforms, String imgUR, Double score) {
         this.longDescription = longDescription;
         this.shortDescription = shortDescription;
         this.id = id;
         this.title = title;
         this.year = year;
         this.genre = genre;
-        this.platform = platform;
+        this.platforms = platforms;
         this.imgURL = imgURL;
-    }
-
-    public Game(Game source) {
-        this.id = source.id;
-        this.title = source.title;
-        this.year = source.year;
-        this.genre = source.genre;
-        this.platform = source.platform;
-        this.imgURL = source.imgURL;
-        this.shortDescription = source.shortDescription;
-        this.longDescription = source.longDescription;
+        this.score = score;
     }
 
     public Long getId() {
@@ -84,12 +81,12 @@ public class Game {
         this.imgURL = imgURL;
     }
 
-    public String getPlatform() {
-        return platform;
+    public String getplatforms() {
+        return platforms;
     }
 
-    public void setPlatform(String platform) {
-        this.platform = platform;
+    public void setplatforms(String platforms) {
+        this.platforms = platforms;
     }
 
     public String getGenre() {
@@ -115,6 +112,14 @@ public class Game {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    } 
 
     @Override
     public boolean equals(Object o) {
