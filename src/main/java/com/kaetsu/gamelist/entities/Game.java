@@ -24,6 +24,8 @@ public class Game {
     private String genre;
     private String platforms;
     private Double score;
+
+    @Column(name = "img_url")
     private String imgURL;
     
     // Annotate the descriptions fields for explicit TEXT type in DB, default is VARCHAR with only 255 chars limit

@@ -1,5 +1,7 @@
 package com.kaetsu.gamelist.dto;
 
+import com.kaetsu.gamelist.entities.Game;
+
 public class GameMinDTO {
 
     private Long id;
