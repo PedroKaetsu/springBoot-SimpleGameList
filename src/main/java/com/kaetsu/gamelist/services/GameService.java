@@ -3,6 +3,7 @@ package com.kaetsu.gamelist.services;
 import java.util.List;
 
 import com.kaetsu.gamelist.dto.GameDTO;
+import com.kaetsu.gamelist.projections.GameMinProjection;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -36,5 +37,11 @@ public class GameService {
                 .map(GameMinDTO::new)
                 // toList method allows to collect the transformed objects into a new list
                 .toList();
+    }
+
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> findAllByList(Long id) {
+        List<GameMinProjection> result = gameRepository.searchByList(id);
+        return result.stream().map(GameMinDTO::new).toList();
     }
 }

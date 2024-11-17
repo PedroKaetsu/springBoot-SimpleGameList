@@ -1,8 +1,8 @@
 -- Pre-populate the database with some data
 
 -- Insert some genres in tb_game_list table
-INSERT INTO tb_game_list (name) VALUES ('Adventure & Role-playing');
-INSERT INTO tb_game_list (name) VALUES ('Platform');
+INSERT INTO tb_games_list (name) VALUES ('Adventure & Role-playing');
+INSERT INTO tb_games_list (name) VALUES ('Platform');
 
 -- Insert some games in tb_games table
 INSERT INTO tb_games (title, score, game_year, genre, platforms, img_url, short_description, long_description) VALUES ('Mass Effect Trilogy', 4.8, 2012, 'Role-playing (RPG), Shooter', 'XBox, Playstation, PC', 'https://raw.githubusercontent.com/PedroKaetsu/springBoot-SimpleGameList/main/assets/1.png', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse officiis corrupti unde repellat non quibusdam! Id nihil itaque ipsum!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum illum placeat eligendi, quis maiores veniam. Incidunt dolorum, nisi deleniti dicta odit voluptatem nam provident temporibus reprehenderit blanditiis consectetur tenetur. Dignissimos blanditiis quod corporis iste, aliquid perspiciatis architecto quasi tempore ipsam voluptates ea ad distinctio, sapiente qui, amet quidem culpa.');
