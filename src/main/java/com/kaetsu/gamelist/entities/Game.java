@@ -1,7 +1,11 @@
 package com.kaetsu.gamelist.entities;
 
-import jakarta.persistence.*;
-import org.springframework.context.annotation.Configuration;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 
 import java.util.Objects;
 
