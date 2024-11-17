@@ -1,6 +1,7 @@
 package com.kaetsu.gamelist.dto;
 
 import com.kaetsu.gamelist.entities.Game;
+import com.kaetsu.gamelist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -11,7 +12,6 @@ public class GameMinDTO {
     private String shortDescription;
 
     public GameMinDTO() {
-
     }
 
     public GameMinDTO(Long id, String title, Integer year, String imgURL, String shortDescription) {
@@ -30,6 +30,14 @@ public class GameMinDTO {
         this.shortDescription = source.getShortDescription();
     }
 
+    public GameMinDTO(GameMinProjection projection) {
+        this.id = projection.getId();
+        this.title = projection.getTitle();
+        this.year = projection.getYear();
+        this.imgURL = projection.getImgUrl();
+        this.shortDescription = projection.getShortDescription();
+    }
+
     public Long getId() {
         return this.id;
     }
@@ -37,7 +45,8 @@ public class GameMinDTO {
     public String getTitle() {
         return this.title;
     }
-     public String getShortDescription() {
+
+    public String getShortDescription() {
         return shortDescription;
     }
 
